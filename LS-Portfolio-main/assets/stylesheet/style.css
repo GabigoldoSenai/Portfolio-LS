@@ -1,0 +1,288 @@
+*,
+*:before,
+*:after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --branco-fonte: #EDE7E7;
+    --rosa-base: #FC0147;
+    --roxo-base: #52088C;
+    --amarelo-base: #F8B10A;
+    --azulclaro-base: #54acd1;
+    --roxoescuro-contraste: #39245F;
+}
+
+html{
+    scroll-behavior: smooth;
+    background-color: #39245F;
+}
+
+.menu-mobile{
+    display:none;
+}
+header{
+    height: 100px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--roxo-base);
+    margin:auto;
+    position: fixed;
+    font-weight: 400;
+    background: linear-gradient( rgba(47, 45, 51, 0.5), transparent);
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+}
+
+header::before{
+    content:"";
+    position:absolute;
+    top:0;
+    left:-100%;
+    width:100%;
+    height: 100%;
+    background: linear-gradient(90deg,transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: 0.2s;
+    
+}
+
+header:hover::before{
+    left: 100%;
+}
+
+header:after{
+    content: "";
+    position: absolute;
+    background-color: #f0f0f0;
+    height: 1.5px;
+    display: flex;
+    width: 90%;
+    left:5%;
+    right:5%;
+    bottom: 0px;
+    opacity: 30%
+}
+
+.logo{
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    margin-left: 4vw;
+    max-width: 35px;
+}
+
+.logo a{
+    margin-left: 10px;
+    font-size: 25px;
+    color: var(--branco-fonte);
+    font-family: 'Reem Kufi Fun', Verdana, sans-serif;
+}
+
+nav a{
+    color: var(--branco-fonte);
+    text-decoration: none;
+    font-family: 'Reem Kufi Fun', Verdana, sans-serif;
+
+}
+
+nav{
+    margin: 0 5vw;
+    font-size: 16px;
+}
+
+nav .nav-scroll{
+    position:relative;
+    opacity: 70%;
+    margin: 3.6vw;
+}
+
+nav .nav-scroll:hover{
+    opacity:100%;
+}
+
+nav .nav-scroll::after{
+    content:"";
+    position:absolute;
+    background-color: var(--rosa-base);
+    height: 2px;
+    width: 0%;
+    left:-10%;
+    bottom:-2px;
+    transition: 0.2s;
+}
+
+nav .nav-scroll:hover::after{
+    width: 120%;
+}
+
+.btn_download{
+    background-color: var(--rosa-base);
+    border-radius: 8px;
+    padding: 13px 31px;
+    margin-left: 50px;
+    border: none;
+    box-shadow: none;
+}
+
+.btn_download:hover{
+    transition: 0.3s;
+    box-shadow: 0 0 0 2px #EDE7E7, 0 0 0 6px #FC0147;
+}
+
+@media (max-width: 1172px){
+    nav{
+        display: none;
+    }
+    .menu-mobile{
+        display:flex;
+        margin: 0 5vw;
+        background-color: none;
+    }
+}
+
+/*--------------------*/
+main{
+    height: 100vh;
+    background-color: var(--roxo-base);
+    display:flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.main-text{
+    color: var(--branco-fonte);
+    font-family: 'Reem Kufi Fun', sans-serif;
+    font-weight: 400;
+    
+    width: 40%;
+}
+
+.main-text h3{
+    font-size: 25px;
+}
+
+.main-text h1{
+    color: var(--amarelo-base);
+    text-shadow: 9px 11px 11px #39245F;
+    padding: 5px 0px;
+    font-size: 90px;
+    font-family: passion one, arial;
+}
+
+.main-text p{
+    font-size: 20px;
+    line-height: 133.5%;
+}
+
+.typing-text{
+    display:flex;
+}
+
+.typing-text .dynamic-text{
+    margin-left:5px;
+    overflow:hidden;
+    height: 30px;
+}
+.dynamic-text li{
+    list-style: none;
+    color:#FC0147;
+    position: relative;
+    font-size: 25px;
+    overflow: hidden;
+    top: -3px;
+    line-height: 30px;
+    animation: slide 12s steps(4) infinite;
+}
+
+@keyframes slide{
+    100%{
+        top: -120px;
+    }
+}
+
+.dynamic-text li::after{
+    content:"";
+    position: absolute;
+    overflow: hidden;
+    height: 100%;
+    width: 100%;
+    left:0;
+    border-left: 3px solid #FC0147;
+    background-color:var(--roxo-base);
+    animation: typing 3s steps(12) infinite;
+}
+
+@keyframes typing{
+    40%, 60%{
+        left: calc(100% + 30px);
+    }
+    100%{
+        left:0;
+    }
+}
+/*
+.main-text img{
+    display:inline-block;
+    padding: 15px 15px;
+}*/
+
+.main-text button{
+    border-radius: 100px;
+    padding: 18px;
+    border-style: none;
+}
+
+.main-text button img{
+    max-width: 30px;
+    max-height: 20px;
+}
+
+.main-img{
+    background-color: rgba(248, 177, 13, .5);
+    margin-top: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.main-img figure.avatar{
+    width:500px;
+    height: 700px;
+}
+
+.main-img figure.avatar img{
+    position:absolute;
+}
+
+@media (max-width:979px){
+    .main-text{
+        width: 100%;
+        margin: 70px;
+    }
+    .main-img{
+        display:none;
+    }
+}
+/*--------------------*/
+
+.skills{
+    height: 100vh;
+    background-color: var(--azulclaro-base);
+}
+
+.projetos{
+    height: 100vh;
+    background-color: var(--rosa-base);
+}
+
+.sobre-mim{
+    height: 100vh;
+    background-color: var(--amarelo-base);
+}
+
