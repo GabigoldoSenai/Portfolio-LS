@@ -121,20 +121,7 @@ nav .nav-scroll:hover::after {
     box-shadow: 0 0 0 2px var(--branco-fonte), 0 0 0 5px var(--rosa-base);
 }
 
-@media (max-width: 1172px) {
-    nav {
-        display: none;
-    }
-
-    .menu-mobile {
-        display: flex;
-        margin: 0 5vw;
-        background-color: none;
-    }
-}
-
-
-main {
+main#home {
     height: 100vh;
     background-color: var(--roxo-base);
     display: flex;
@@ -142,11 +129,48 @@ main {
     justify-content: space-around;
 }
 
+.floating-object {
+    position: absolute;
+}
+
+.first-layer {
+    z-index: 1;
+}
+
+.fourth-layer {
+    z-index: 4;
+}
+
+main>#pinkelement {
+    width: 270px;
+    top: 55%;
+    left: 40%;
+}
+
+main>#whitecircle {
+    width: 100px;
+    top: 17%;
+    left: 75%;
+}
+
+main>#bluecircle{
+    width: 270px;
+    top: 20%;
+    right: -10%;
+}
+
+main>#yellowelement{
+    width: 320px;
+    top: 73%;
+    right: -5%;
+}
+
 .main-text {
     color: var(--branco-fonte);
     font-family: 'Reem Kufi Fun', sans-serif;
     font-weight: 400;
     width: 40%;
+    z-index: 3;
 }
 
 .main-text h3 {
@@ -270,29 +294,16 @@ main {
 }
 
 .main-img {
-    z-index: 0;
     width: 40%;
-    margin-top: -600px;
+    margin-top: -550px;
+    z-index: 3;
 }
 
 .main-img figure.avatar img {
     position: absolute;
-    width: 48%;
+    width: 50%;
     height: auto;
     right: 5%;
-}
-
-@media (max-width:979px) {
-
-
-    .main-text {
-        width: 100%;
-        margin: 0 30%;
-    }
-
-    .main-img figure.avatar {
-        display: none;
-    }
 }
 
 .skills {
@@ -327,4 +338,41 @@ main {
 .footer {
     height: 20vh;
     background-color: var(--roxoescuro-contraste);
+}
+
+@media (max-width: 1270px) {
+    .main-text h1 {
+    font-size: 80px;
+    }
+}
+
+@media (max-width: 1172px) {
+    nav {
+        display: none;
+    }
+
+    .menu-mobile {
+        display: flex;
+        margin: 0 5vw;
+        background-color: none;
+    }
+
+    .main-text h1 {
+        font-size: 65px;
+    }
+}
+
+
+@media (max-width:979px) {
+    main{
+        display:block;
+    }
+    .main-text {
+        width: 100%;
+        margin: 0 30%;
+    }
+
+    .main-img figure.avatar {
+        display: none;
+    }
 }
