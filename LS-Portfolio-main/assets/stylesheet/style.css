@@ -217,16 +217,16 @@ main {
     }
 }
 
-.wrapper{
-    display:flex;
+.wrapper {
+    display: flex;
     margin-top: 30px;
     justify-content: flex-start;
     align-items: center;
     gap: 30px;
 }
 
-.wrapper button{
-    display:inline-block;
+.wrapper button {
+    display: inline-block;
     padding: 10px;
     background-color: white;
     border-radius: 50px;
@@ -236,37 +236,37 @@ main {
     align-items: center;
 }
 
-.wrapper button img{
+.wrapper button img {
     width: 80%;
 }
 
-#btn-email img{
+#btn-email img {
     margin: 3px;
 }
 
-.wrapper button:hover{
+.wrapper button:hover {
     border-radius: 20px;
     transition: .3s;
     box-shadow: 0 0 0 2px purple, 0 0 0 4px #ffd2df;
-    cursor:pointer;
+    cursor: pointer;
     background-color: #ffd2df;
 }
 
-.wrapper #btn-email::after{
-    content:"Copiado!";
-    position:absolute;
+.wrapper #btn-email::after {
+    content: "Copiado!";
+    position: absolute;
     font-family: Reem Kufi Fun, sans-serif;
     padding: 4px 10px;
-    color:var(--branco-fonte);
-    font-size:12px;
+    color: var(--branco-fonte);
+    font-size: 12px;
     margin: 15px -15px;
     border-radius: 8px;
     background-color: #FC0147;
-    display:none;
+    display: none;
 }
 
-.wrapper #btn-email:active::after{
-    display:block;
+.wrapper #btn-email:active::after {
+    display: block;
 }
 
 .main-img {
@@ -277,30 +277,33 @@ main {
 
 .main-img figure.avatar img {
     position: absolute;
+    width: 48%;
+    height: auto;
+    right: 5%;
 }
 
 @media (max-width:979px) {
 
 
-    .main-text{
+    .main-text {
         width: 100%;
         margin: 0 30%;
     }
 
     .main-img figure.avatar {
-        display:none;
+        display: none;
     }
 }
 
-.skills{
+.skills {
     height: 60vh;
 }
 
-.skills img{
+.skills img {
     position: absolute;
 }
 
-.parallax-element{
+.parallax-element {
     width: 150%;
     height: 500px;
     margin: -40px -50px;
