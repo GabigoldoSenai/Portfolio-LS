@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+   <head>
+      <meta charset="utf-8">
+      <title>TESTE</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link
+          href="https://fonts.googleapis.com/css2?family=Passion+One:wght@700&family=Reem+Kufi+Fun:wght@400;700&display=swap"
+          rel="stylesheet">
+      <link rel="website icon" type="png" href="assets/img/logo.png">
+      <style>
+*,
+*:before,
+*:after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root {
+    --branco-fonte: #EDE7E7;
+    --rosa-base: #FC0147;
+    --roxo-base: #52088C;
+    --amarelo-base: #F8B10A;
+    --azulclaro-base: #54acd1;
+    --roxoescuro-contraste: #39245F;
+}
+html {
+    scroll-behavior: smooth;
+    background-color: var(--roxo-base);
+    height: 500vh;
+}
+main {
+    height: 100vh;
+    background-color: var(--roxo-base);
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding-top: 100px;
+}
+.main-text {
+    color: var(--branco-fonte);
+    font-family: 'Reem Kufi Fun', sans-serif;
+    font-weight: 400;
+
+    width: 40%;
+}
+.main-text h3 {
+    font-size: 25px;
+}
+.main-text h1 {
+    color: var(--amarelo-base);
+    text-shadow: 9px 11px 11px #39245F;
+    padding: 5px 0px;
+    font-size: 90px;
+    font-family: passion one, arial;
+}
+.main-text p {
+    font-size: 20px;
+    line-height: 133.5%;
+}
+.typing-text {
+    display: flex;
+}
+.typing-text .dynamic-text {
+    margin-left: 5px;
+    overflow: hidden;
+    height: 30px;
+}
+.dynamic-text li {
+    list-style: none;
+    color: #FC0147;
+    position: relative;
+    font-size: 25px;
+    overflow: hidden;
+    top: -3px;
+    line-height: 30px;
+    animation: slide 12s steps(4) infinite;
+}
+@keyframes slide {
+    100% {
+        top: -120px;
+    }
+}
+.dynamic-text li::after {
+    content: "";
+    position: absolute;
+    overflow: hidden;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    border-left: 3px solid #FC0147;
+    background-color: var(--roxo-base);
+    animation: typing 3s steps(12) infinite;
+}
+@keyframes typing {
+
+    40%,
+    60% {
+        left: calc(100% + 30px);
+    }
+
+    100% {
+        left: 0;
+    }
+}
+
+.main-text button {
+    display: inline-block;
+    border-radius: 100px;
+    padding: 3px;
+    border-style: none;
+}
+
+
+.main-text button img{
+    margin: 12px 12px;
+    max-width: 30px;
+    max-height: 30px;
+}
+
+.wrapper button input{
+            visibility: hidden;
+        }
+
+.wrapper button:hover {
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.wrapper .btn::before{
+            content:"Copiado!";
+            padding: 8px 10px;
+            color:aliceblue;
+            font-size:12px;
+            border-radius: 8px;
+            top: -15px;
+            left: 0;
+            background-color: #FC0147;
+        }
+
+
+.wrapper .btn_socialmedia {
+    display: inline-block;
+    height: 60px;
+    width: 60px;
+    margin: 0 10px;
+    overflow: hidden;
+    background: var(--branco-fonte);
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease-out;
+}
+
+.wrapper .btn_socialmedia:hover {
+    border-radius: 20px;
+    transition: 0.3s;
+    box-shadow: 0 0 0 2px var(--roxo-base), 0 0 0 4px var(--branco-fonte);
+}
+
+.wrapper .btn_socialmedia .icon img{
+    width: 30px;
+    margin: 15px 15px;
+}
+.wrapper .btn_socialmedia::after{
+            content:"Copiado!";
+            position:absolute;
+            padding: 8px 10px;
+            color:aliceblue;
+            font-size:12px;
+            margin: 0 -15px;
+            border-radius: 8px;
+            background-color: #FC0147;
+        }
+
+/*
+        .btn_socialmedia:active::after{
+            display:block;
+        }
+        */
+
+.main-img {
+    background-color: rgba(189, 184, 174, 0.5);
+    margin-top: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40%;
+}
+
+.main-img figure.avatar {
+    width: 500px;
+    height: 700px;
+}
+
+.main-img figure.avatar img {
+    position: absolute;
+}
+      </style>
+    </head>
+   <body>
+    <main id="home">
+      <section class="main-text">
+          <h3> SUA PRÓXIMA DESENVOLVEDORA</h3>
+              <h1> FRONT-END ;)</h1>
+              <p> Prazer! Tenho 16 anos e sempre fui apaixonada por arte, e vi na programação uma forma de
+                  expressá-la.
+                  Atualmente estou estudando HTML, CSS e JS.
+              </p>
+              <div class="typing-text">
+                  <div class="static-text">
+                      <p>Busco sempre por</p>
+                  </div>
+                  <ul class="dynamic-text">
+                      <li><span>criatividade</span></li>
+                      <li><span>aprendizado</span></li>
+                      <li><span>organização</span></li>
+                      <li><span>relevância</span></li>
+                  </ul>
+              </div>
+              <br>
+              <div class="wrapper">
+                  <div class="btn_socialmedia">
+                      <div class="copy-text">
+                          <button><i><img src="assets/img/email_icon.svg"></i></button>
+                          <input type="text" class="text" value="leticiag.soares.dev@gmail.com">
+                      </div>
+                  </div>
+                  <div class="btn_socialmedia">
+                      <div class="icon">
+                          <a href="https://www.youtube.com" target="_blank"><img src="assets/img/github_icon.svg"></a>
+                      </div>
+                  </div>
+                  <div class="btn_socialmedia">
+                      <div class="icon">
+                          <a href="https://youtube.com" target="_blank"><img src="assets/img/linkedin_icon.svg"></a>
+                      </div>
+                  </div>
+                  <div class="btn_socialmedia">
+                      <div class="icon">
+                          <a href="https://youtube.com" target="_blank"><img src="assets/img/behance_icon.svg"></a>
+                      </div>
+                  </div>
+
+              </div>
+      </section>
+
+      <section class="main-img">
+          <figure class="avatar">
+              <img class="body" src="assets/img/leticia/body.png" alt="Avatar da Letícia">
+              <img class="hair" src="assets/img/leticia/hair.png">
+              <img class="pupils" src="assets/img/leticia/pupils.png">
+          </figure>
+      </section>
+  </main>
+
+      <script>
+
+        let copyText = document.querySelector(".copy-text")
+        copyText.querySelector("button").addEventListener("click", function(){
+            let input = copyText.querySelector("input.text");
+            input.select();
+            document.execCommand("copy");
+            copyText.classList.add("active");
+            copyText.classList().removeAllRanges();
+            setTimeout(function(){
+                copyText.classList.remove("active");
+            }, 2500);
+        });
+      </script>
+   </body>
+</html>

@@ -1,6 +1,6 @@
 *,
 *:before,
-*:after{
+*:after {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -15,59 +15,44 @@
     --roxoescuro-contraste: #39245F;
 }
 
-html{
+html {
     scroll-behavior: smooth;
-    background-color: #39245F;
+    background-color: var(--roxo-base);
 }
 
-.menu-mobile{
-    display:none;
+.menu-mobile {
+    display: none;
 }
-header{
+
+header {
     height: 100px;
     width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
     background-color: var(--roxo-base);
-    margin:auto;
+    margin: auto;
     position: fixed;
     font-weight: 400;
-    background: linear-gradient( rgba(47, 45, 51, 0.5), transparent);
+    background: linear-gradient(rgba(47, 45, 51, 0.5), transparent);
     backdrop-filter: blur(10px);
     z-index: 1000;
 }
 
-header::before{
-    content:"";
-    position:absolute;
-    top:0;
-    left:-100%;
-    width:100%;
-    height: 100%;
-    background: linear-gradient(90deg,transparent, rgba(255, 255, 255, 0.2), transparent);
-    transition: 0.2s;
-    
-}
-
-header:hover::before{
-    left: 100%;
-}
-
-header:after{
+header:after {
     content: "";
     position: absolute;
     background-color: #f0f0f0;
     height: 1.5px;
     display: flex;
     width: 90%;
-    left:5%;
-    right:5%;
+    left: 5%;
+    right: 5%;
     bottom: 0px;
     opacity: 30%
 }
 
-.logo{
+.logo {
     display: flex;
     align-items: center;
 }
@@ -77,97 +62,98 @@ header:after{
     max-width: 35px;
 }
 
-.logo a{
+.logo a {
     margin-left: 10px;
     font-size: 25px;
     color: var(--branco-fonte);
     font-family: 'Reem Kufi Fun', Verdana, sans-serif;
 }
 
-nav a{
+nav a {
     color: var(--branco-fonte);
     text-decoration: none;
     font-family: 'Reem Kufi Fun', Verdana, sans-serif;
 
 }
 
-nav{
+nav {
     margin: 0 5vw;
     font-size: 16px;
 }
 
-nav .nav-scroll{
-    position:relative;
+nav .nav-scroll {
+    position: relative;
     opacity: 70%;
     margin: 3.6vw;
 }
 
-nav .nav-scroll:hover{
-    opacity:100%;
+nav .nav-scroll:hover {
+    opacity: 100%;
 }
 
-nav .nav-scroll::after{
-    content:"";
-    position:absolute;
+nav .nav-scroll::after {
+    content: "";
+    position: absolute;
     background-color: var(--rosa-base);
     height: 2px;
     width: 0%;
-    left:-10%;
-    bottom:-2px;
+    left: -10%;
+    bottom: -2px;
     transition: 0.2s;
 }
 
-nav .nav-scroll:hover::after{
+nav .nav-scroll:hover::after {
     width: 120%;
 }
 
-.btn_download{
+.btn_download {
     background-color: var(--rosa-base);
-    border-radius: 8px;
+    border-radius: 30px;
     padding: 13px 31px;
     margin-left: 50px;
     border: none;
     box-shadow: none;
 }
 
-.btn_download:hover{
+.btn_download:hover {
+    border-radius: 8px;
     transition: 0.3s;
-    box-shadow: 0 0 0 2px #EDE7E7, 0 0 0 6px #FC0147;
+    box-shadow: 0 0 0 2px var(--branco-fonte), 0 0 0 5px var(--rosa-base);
 }
 
-@media (max-width: 1172px){
-    nav{
+@media (max-width: 1172px) {
+    nav {
         display: none;
     }
-    .menu-mobile{
-        display:flex;
+
+    .menu-mobile {
+        display: flex;
         margin: 0 5vw;
         background-color: none;
     }
 }
 
-/*--------------------*/
-main{
+
+main {
     height: 100vh;
     background-color: var(--roxo-base);
-    display:flex;
+    display: flex;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: space-around;
 }
 
-.main-text{
+.main-text {
     color: var(--branco-fonte);
     font-family: 'Reem Kufi Fun', sans-serif;
     font-weight: 400;
-    
     width: 40%;
 }
 
-.main-text h3{
+.main-text h3 {
     font-size: 25px;
 }
 
-.main-text h1{
+.main-text h1 {
     color: var(--amarelo-base);
     text-shadow: 9px 11px 11px #39245F;
     padding: 5px 0px;
@@ -175,23 +161,24 @@ main{
     font-family: passion one, arial;
 }
 
-.main-text p{
+.main-text p {
     font-size: 20px;
     line-height: 133.5%;
 }
 
-.typing-text{
-    display:flex;
+.typing-text {
+    display: flex;
 }
 
-.typing-text .dynamic-text{
-    margin-left:5px;
-    overflow:hidden;
+.typing-text .dynamic-text {
+    margin-left: 5px;
+    overflow: hidden;
     height: 30px;
 }
-.dynamic-text li{
+
+.dynamic-text li {
     list-style: none;
-    color:#FC0147;
+    color: #FC0147;
     position: relative;
     font-size: 25px;
     overflow: hidden;
@@ -200,89 +187,141 @@ main{
     animation: slide 12s steps(4) infinite;
 }
 
-@keyframes slide{
-    100%{
+@keyframes slide {
+    100% {
         top: -120px;
     }
 }
 
-.dynamic-text li::after{
-    content:"";
+.dynamic-text li::after {
+    content: "";
     position: absolute;
     overflow: hidden;
     height: 100%;
     width: 100%;
-    left:0;
+    left: 0;
     border-left: 3px solid #FC0147;
-    background-color:var(--roxo-base);
+    background-color: var(--roxo-base);
     animation: typing 3s steps(12) infinite;
 }
 
-@keyframes typing{
-    40%, 60%{
+@keyframes typing {
+
+    40%,
+    60% {
         left: calc(100% + 30px);
     }
-    100%{
-        left:0;
+
+    100% {
+        left: 0;
     }
 }
-/*
-.main-text img{
-    display:inline-block;
-    padding: 15px 15px;
-}*/
 
-.main-text button{
-    border-radius: 100px;
-    padding: 18px;
-    border-style: none;
-}
-
-.main-text button img{
-    max-width: 30px;
-    max-height: 20px;
-}
-
-.main-img{
-    background-color: rgba(248, 177, 13, .5);
-    margin-top: 100px;
-    display: flex;
+.wrapper{
+    display:flex;
+    margin-top: 30px;
+    justify-content: flex-start;
     align-items: center;
-    justify-content: center;
+    gap: 30px;
 }
 
-.main-img figure.avatar{
-    width:500px;
-    height: 700px;
+.wrapper button{
+    display:inline-block;
+    padding: 10px;
+    background-color: white;
+    border-radius: 50px;
+    border-style: none;
+    width: 60px;
+    height: 60px;
+    align-items: center;
 }
 
-.main-img figure.avatar img{
+.wrapper button img{
+    width: 80%;
+}
+
+#btn-email img{
+    margin: 3px;
+}
+
+.wrapper button:hover{
+    border-radius: 20px;
+    transition: .3s;
+    box-shadow: 0 0 0 2px purple, 0 0 0 4px #ffd2df;
+    cursor:pointer;
+    background-color: #ffd2df;
+}
+
+.wrapper #btn-email::after{
+    content:"Copiado!";
     position:absolute;
+    font-family: Reem Kufi Fun, sans-serif;
+    padding: 4px 10px;
+    color:var(--branco-fonte);
+    font-size:12px;
+    margin: 15px -15px;
+    border-radius: 8px;
+    background-color: #FC0147;
+    display:none;
 }
 
-@media (max-width:979px){
+.wrapper #btn-email:active::after{
+    display:block;
+}
+
+.main-img {
+    z-index: 0;
+    width: 40%;
+    margin-top: -600px;
+}
+
+.main-img figure.avatar img {
+    position: absolute;
+}
+
+@media (max-width:979px) {
+
+
     .main-text{
         width: 100%;
-        margin: 70px;
+        margin: 0 30%;
     }
-    .main-img{
+
+    .main-img figure.avatar {
         display:none;
     }
 }
-/*--------------------*/
 
 .skills{
-    height: 100vh;
-    background-color: var(--azulclaro-base);
+    height: 60vh;
 }
 
-.projetos{
-    height: 100vh;
-    background-color: var(--rosa-base);
+.skills img{
+    position: absolute;
 }
 
-.sobre-mim{
+.parallax-element{
+    width: 150%;
+    height: 500px;
+    margin: -40px -50px;
+    background: linear-gradient(#54acd1cc, var(--azulclaro-base) 20%, #54acd1cc);
+    filter: drop-shadow(54px 4px 38px rgba(0, 0, 0, 0.25)) drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    backdrop-filter: blur(4.5px);
+    transform: rotate(2deg);
+    transform-origin: 50%;
+}
+
+.projetos {
+    height: 100vh;
+    background-image: url('../img/nosaku\ 2.png');
+}
+
+.sobre-mim {
     height: 100vh;
     background-color: var(--amarelo-base);
 }
 
+.footer {
+    height: 20vh;
+    background-color: var(--roxoescuro-contraste);
+}
