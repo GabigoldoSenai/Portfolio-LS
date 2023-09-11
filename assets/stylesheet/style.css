@@ -362,14 +362,39 @@ main>#yellowelement{
     }
 }
 
+@media (max-width:930px) {
 
-@media (max-width:979px) {
-    main{
-        display:block;
+    .main-img figure.avatar {
+        display: none;
+    }
+
+
+    .main-text{
+        margin-left: 8%;
+        width:100%;
+    }
+
+    main>#bluecircle{
+        top: 30%;
+        width: 180px;
+    }
+
+    main>#yellowelement{
+        width: 200px;
+    }
+
+   #pinkelement{
+        display:none;
+    }
+}
+
+@media (max-width:559px) {
+    main>.floating-object{
+        display:none;
     }
     .main-text {
+        margin-top: 20%;
         width: 100%;
-        margin: 0 30%;
     }
 
     .main-img figure.avatar {
